@@ -36,12 +36,17 @@
       <div class="announcement-bar">
 		<p>Welcome to Covenant Church Ministries! Contact us for all the prayer requests.</p>
       </div>
-
+	
 <div class="container">
             <h2>Spreading Hope, Faith, and Love in Our Communities</h2>
             <p>Join us in our mission to serve and uplift others with the love of Christ.</p>
             <a href="https://form.jotform.com/243223594699469" class="cta-button">Contact Us</a>
         </div>
+		
+<div class="bible-verse-container">
+  <p id="bible-verse">Loading Bible verse...</p>
+</div>
+
     </section>
 
     <!-- About Section -->
@@ -113,7 +118,7 @@
     <img src="photo13.jpeg" style="width:100%">
   </div>  
   <div class="column">
-    <img src="photo14.jpg" style="width:100%">
+    <img src="photo14.JPG" style="width:100%">
     <img src="photo15.jpeg" style="width:100%">
     <img src="photo16.jpeg" style="width:100%">
     <img src="photo17.jpeg" style="width:100%">
@@ -125,7 +130,7 @@
     <img src="photo21.jpeg" style="width:100%">
     <img src="photo22.jpeg" style="width:100%">
     <img src="photo23.jpg" style="width:100%">
-    <img src="photo24.jpg" style="width:100%">
+    <img src="photo24.JPG" style="width:100%">
     <img src="photo9.jpeg" style="width:100%">
   </div>
 </div>
@@ -232,6 +237,30 @@
   </script>
   <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
   <script>window.jotformEmbedHandler("iframe[id='" + componentID + "_iframe']", "https://form.jotform.com/")</script>
+
+<script>
+// List of Bible verses
+const verses = [
+    { text: "For God so loved the world, that he gave his only Son.", reference: "John 3:16" },
+    { text: "The LORD is my shepherd; I shall not want.", reference: "Psalm 23:1" },
+    { text: "I can do all things through Christ who strengthens me.", reference: "Philippians 4:13" },
+    { text: "Trust in the LORD with all your heart, and do not lean on your own understanding.", reference: "Proverbs 3:5" },
+    { text: "Come to me, all who labor and are heavy laden, and I will give you rest.", reference: "Matthew 11:28" }
+];
+
+// Function to display today's Bible verse
+function displayDailyBibleVerse() {
+    const today = new Date();
+    const index = today.getDate() % verses.length; // Rotate verses daily
+    const verse = verses[index];
+    const verseText = `"${verse.text}" - ${verse.reference}`;
+    document.getElementById("bible-verse").textContent = verseText;
+}
+
+// Call the function on page load
+window.onload = displayDailyBibleVerse;
+
+</script>
 
 </body>
 </html>
