@@ -73,10 +73,53 @@ nav ul li a:hover {
     color: white;
     margin-top: 10px;
 }
+/* Scrolling Announcement Bar */
+.announcement-bar {
+     /* Yellow background for the announcement */
+    
+    padding: 5px 0; /* Reduced padding for a more compact look */
+    font-weight: bold;
+    text-align: center;
+    position: absolute; /* Position it within the hero section */
+    top: 0; /* Position at the top of the hero section */
+    right: 0; /* Make sure it's initially at the far right */
+    width: 100%; /* Full width so it can span across the screen */
+    font-size: 12px; /* Decrease the font size of the message */
+    z-index: 999; /* Ensure it stays above other content inside hero */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll-announcement 10s linear infinite; /* Animation to scroll */
+}
+
+/* Keyframes for scrolling animation using transform */
+@keyframes scroll-announcement {
+    0% {
+        transform: translateX(100%); /* Start from the extreme right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move all the way to the left, off the screen */
+    }
+}
 
 /* Hero Section */
 .hero {
-    background: url('Backgroundimage.JPG') no-repeat center center/cover;
+    background: url('Backgroundimage.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 10px;
+    position: relative; /* Ensure that the announcement bar is positioned relative to this section */
+}
+
+/* Home Section */
+.hero {
+    background: url('Backgroundimage.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('Backgroundimage.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 100px 10px;
@@ -396,3 +439,114 @@ body {
     margin-bottom: 70px;
 }
 }
+/* Hover Effect for Dropdown Menu Items (Mobile and Desktop) */
+nav ul li a:hover {
+    background-color: #FFD700;
+    color: #2E3A47;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Section Headings (Desktop and Mobile) */
+section h2:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Section Hover Pop Effect */
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Hover Effects */
+
+/* For Desktop Screens */
+@media screen and (min-width: 800px) {
+    section:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    section h2:hover {
+        transform: scale(1.2);
+        color: #FFC107;
+        transition: transform 0.4s ease, color 0.4s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #FFC107;
+        color: #1E3A47;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+}
+
+/* For Mobile Screens */
+@media screen and (max-width: 799px) {
+    section:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section h2:hover {
+        transform: scale(1.05);
+        color: #FFB300;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #FFB300;
+        color: #2C3A47;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+}
+/* Hover effect for dropdown hamburger menu items */
+nav ul li a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for section headings */
+section h2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for each section (except for Home section) */
+section:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/* Prevent hover effect on Hero section (Home) */
+.hero:hover {
+    transform: none;
+}
+/* Hover effect for dropdown hamburger menu items */
+nav ul li a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for section headings */
+section h2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for each section (except for Home section) */
+section:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/* Prevent hover effect on Hero section (Home) */
+.hero:hover {
+    transform: none;
+}
+
