@@ -1,0 +1,398 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2E3A47;
+    color: white;
+    padding: 8px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 15px;
+	margin-left: 15px;
+}
+
+header .logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #2E3A47;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('Backgroundimage.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 10px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about,
+#gallery,
+#get-involved,
+#donate {
+    background-color: #fff;
+}
+
+#services,
+#contact {
+    background-color: #f4f4f4;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: calc(33.333% - 20px);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+}
+
+#contact a {
+    color: #4d79ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #2E3A47;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2E3A47;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 20px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    #contact {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+	 .gallery {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    #contact	{
+        padding: 20px 10px;
+    }
+}
+/* Adding Curves to Sections */
+section {
+    position: relative;
+    padding: 30px 10px;
+    text-align: center;
+    overflow: hidden; /* Ensure content doesn't spill out */
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: -50px; /* Adjust based on curve size */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Height of the curve */
+    background: inherit; /* Matches the background color of the section */
+    z-index: -1;
+    clip-path: ellipse(50% 100% at 50% 0%);
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: -50px; /* Adjust based on curve size */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Height of the curve */
+    background: inherit; /* Matches the background color of the section */
+    z-index: -1;
+    clip-path: ellipse(50% 100% at 50% 100%);
+}
+
+/* Adjust Background Colors for Sections */
+#about {
+    background-color: #fff;
+}
+
+#services {
+    background-color: #f4f4f4;
+}
+
+#gallery {
+    background-color: #fff;
+}
+
+#get-involved {
+    background-color: #f4f4f4;
+}
+
+#donate {
+    background-color: #fff;
+}
+
+#contact {
+    background-color: #f4f4f4;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 800px){
+	.hero{
+		background: url('Backgroundimage.jpg') no-repeat center/cover;
+		width:100%;
+	    text-align: bottom;
+		padding: 220px 80px 220px 50px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    margin-bottom: 1px;
+	margin-top: 140px;
+}
+
+.hero p {
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+}
