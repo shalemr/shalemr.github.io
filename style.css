@@ -379,7 +379,7 @@ body {
 }
 @media screen and (min-width: 800px){
 	.hero{
-		background: url('Backgroundimage.jpg') no-repeat center/cover;
+		background: url('Backgroundimage.JPG') no-repeat center/cover;
 		width:100%;
 	    text-align: bottom;
 		padding: 220px 80px 220px 50px;
