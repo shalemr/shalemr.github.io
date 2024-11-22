@@ -93,16 +93,14 @@ nav ul li a:hover {
 }
 
 .cta-button {
-    border-radius: .5rem;
-    border-width: 1px;
-    border-color: #417e384d;
-    background-color: #417e381a;
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255/var(--tw-text-opacity,1));
-    --tw-shadow: 0 1px 2px 0 #0000000d;
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)
-
+    background-color: #FFD700;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
