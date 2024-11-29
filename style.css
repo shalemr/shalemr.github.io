@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.5s;
 }
 .fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .fh5co-nav ul li.has-dropdown {
   position: relative;
@@ -600,30 +600,25 @@ h1, h2, h3, h4, h5, h6, figure {
   ul.timeline:before {
     left: 90px;
   }
-
   ul.timeline > li > .timeline-panel {
     width: calc(100% - 200px);
     width: -moz-calc(100% - 200px);
     width: -webkit-calc(100% - 200px);
   }
-
   ul.timeline > li > .timeline-badge {
     left: 15px;
     margin-left: 0;
     top: 16px;
   }
-
   ul.timeline > li > .timeline-panel {
     float: right;
   }
-
   ul.timeline > li > .timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
   }
-
   ul.timeline > li > .timeline-panel:after {
     border-left-width: 0;
     border-right-width: 14px;
@@ -790,8 +785,8 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #F14E95;
   position: absolute;
   left: 0;
-  top: .05em;
-  font-family: 'icomoon';
+  top: 0.05em;
+  font-family: "icomoon";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -836,7 +831,7 @@ form label {
 .fh5co-cover .display-tc h2 {
   margin: 0;
   padding: 0;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 #fh5co-header .display-tc h1,
 #fh5co-counter .display-tc h1,
@@ -907,7 +902,7 @@ form label {
   margin-bottom: 0;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter .feature-center {
@@ -1357,12 +1352,10 @@ form label {
 #fh5co-started .form-control::-webkit-input-placeholder {
   color: #fff;
 }
-#fh5co-started .form-control:-moz-placeholder {
-  /* Firefox 18- */
+#fh5co-started .form-control:-moz-placeholder { /* Firefox 18- */
   color: #fff;
 }
-#fh5co-started .form-control::-moz-placeholder {
-  /* Firefox 19+ */
+#fh5co-started .form-control::-moz-placeholder { /* Firefox 19+ */
   color: #fff;
 }
 #fh5co-started .form-control:-ms-input-placeholder {
@@ -1408,7 +1401,7 @@ form label {
 }
 
 .owl-carousel .owl-controls .owl-dot span {
-  background: #e6e6e6;
+  background: rgb(229.5, 229.5, 229.5);
 }
 .owl-carousel .owl-controls .owl-dot span:hover, .owl-carousel .owl-controls .owl-dot span:focus {
   background: #cccccc;
@@ -1474,7 +1467,7 @@ form label {
 #fh5co-offcanvas ul li.offcanvas-has-dropdown > a:after {
   position: absolute;
   right: 0px;
-  font-family: 'icomoon';
+  font-family: "icomoon";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -1563,20 +1556,20 @@ form label {
   width: 25px;
   height: 2px;
   color: #252525;
-  font: bold 14px/.4 Helvetica;
+  font: bold 14px/0.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
   background: #252525;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
-  content: '';
+  content: "";
   width: 25px;
   height: 2px;
   background: #252525;
   position: absolute;
   left: 0;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
   color: #fff;
@@ -1676,8 +1669,8 @@ form label {
   border: 2px solid #F14E95;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #f366a3 !important;
-  border-color: #f366a3 !important;
+  background: rgb(242.8691099476, 101.6308900524, 163.1518324607) !important;
+  border-color: rgb(242.8691099476, 101.6308900524, 163.1518324607) !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
@@ -1695,8 +1688,8 @@ form label {
   border: 2px solid #5cb85c;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active {
-  background: #4cae4c !important;
-  border-color: #4cae4c !important;
+  background: rgb(76.0064102564, 174.4935897436, 76.0064102564) !important;
+  border-color: rgb(76.0064102564, 174.4935897436, 76.0064102564) !important;
 }
 .btn-success.btn-outline {
   background: transparent;
@@ -1714,8 +1707,8 @@ form label {
   border: 2px solid #5bc0de;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active {
-  background: #46b8da !important;
-  border-color: #46b8da !important;
+  background: rgb(69.7715736041, 183.845177665, 217.7284263959) !important;
+  border-color: rgb(69.7715736041, 183.845177665, 217.7284263959) !important;
 }
 .btn-info.btn-outline {
   background: transparent;
@@ -1733,8 +1726,8 @@ form label {
   border: 2px solid #f0ad4e;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
-  background: #eea236 !important;
-  border-color: #eea236 !important;
+  background: rgb(238.0078125, 162.109375, 54.4921875) !important;
+  border-color: rgb(238.0078125, 162.109375, 54.4921875) !important;
 }
 .btn-warning.btn-outline {
   background: transparent;
@@ -1752,8 +1745,8 @@ form label {
   border: 2px solid #d9534f;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-  background: #d43f3a !important;
-  border-color: #d43f3a !important;
+  background: rgb(212.4719626168, 62.5046728972, 58.0280373832) !important;
+  border-color: rgb(212.4719626168, 62.5046728972, 58.0280373832) !important;
 }
 .btn-danger.btn-outline {
   background: transparent;
@@ -1767,7 +1760,7 @@ form label {
 
 .btn-outline {
   background: none;
-  border: 2px solid gray;
+  border: 2px solid rgb(127.5, 127.5, 127.5);
   font-size: 16px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
